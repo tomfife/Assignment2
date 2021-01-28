@@ -1,0 +1,33 @@
+﻿<!--This is the common layout across all pages-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/img/basketball_favicon.png" /> <!--Favicon-->
+    <link href="~/css/main.css" rel="stylesheet" /> <!--CSS File-->
+</head>
+<body style="background-color:lightgrey;">
+    <div class="topnav">
+        <a class="active" asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Home" asp-action="GradeCalculator">Grade Calc</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
+    </div>
+    <header>
+        <div class="row">
+            <h1>@ViewBag.Header</h1>
+        </div>
+    </header>
+    <br />
+
+    @RenderBody() <!--This is where we are inserting the body-->
+
+    <footer>
+        Copyright 2021 - Fife Industries
+    </footer>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/gradingcalc.js"></script>
+</body>
+</html>

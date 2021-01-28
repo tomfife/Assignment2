@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZtNDlpXIEiP8oFFb6l7nGFz+a1Tgm4RY+jLvOLmLKUPYnnSEoXBthmI+8SLwYqkT08OnU4a5GvJbnuSL/E1awA==",
+  "success": true,
+  "projectFilePath": "/Users/thomas.fife/Projects/thomasSecondWebApp/thomasSecondWebApp/thomasSecondWebApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/thomas.fife/.nuget/packages/odetocode.usenodemodules/3.0.0/odetocode.usenodemodules.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Header = "Grade Calculator";
+}
+
+@model thomasSecondWebApp.Models.GradeCalculatorModel
+
+<body>
+    <form method="post">
+        <fieldset class="center">
+            <legend class="center_element">Grade Calculator</legend>
+            <label>50% - Assignments: </label>
+            <input id="assignments" asp-for="assignments" placeholder="100" />
+            <br />
+            <label>10% - Group Projects: </label>
+            <input id="groupProjects" asp-for="groupProjects" placeholder="100" />
+            <br />
+            <label>10% - Quizzes: </label>
+            <input id="quizzes" asp-for="quizzes" placeholder="100" />
+            <br />
+            <label>20% - Exams: </label>
+            <input id="exams" asp-for="exams" placeholder="100" />
+            <br />
+            <label>10% - Intex: </label>
+            <input id="intex" asp-for="intex" placeholder="100" />
+            <br />
+            <br />
+
+            <!--return false is to make sure that the page doesn't reload and the innerHTML disappears-->
+            <button type="submit" id="submitButton" onclick="return false" >Submit</button>
+
+            <!--On click to make sure that when it is reset, the text is still there-->
+            <button type="reset" onclick= "document.getElementById('finalScore') = 'Final Score: '; document.getElementById('letterGrade').innerHTML = 'Letter Grade: '">Reset</button>
+            <h3 id="finalScore">Final Score: </h3>
+            <h3 id="letterGrade">Letter Grade: </h3>
+
+            <div asp-validation-summary="All"></div> <!--This makes it show all error messages-->
+
+        </fieldset>
+    </form>
+</body>
